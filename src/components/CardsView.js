@@ -10,22 +10,22 @@ export const CardsView = ({ cards }) => {
     if (i >= columnLength && i < 2 * columnLength) column2.push(cards[i]);
     if (i >= 2 * columnLength) column3.push(cards[i]);
   }
-
+  
   return (
     <div className="img-row">
       <div className="column">
-        {column1.map((card) => (
-          <ShopCard card={card} />
+        {column1.map((card, index) => (
+          <ShopCard card={card} key={index} />
         ))}
       </div>
       <div className="column">
-        {column2.map((card) => (
-          <ShopCard card={card} />
+        {column2.map((card, index) => (
+          <ShopCard card={card} key={index} />
         ))}
       </div>
       <div className="column">
-        {column3.map((card) => (
-          <ShopCard card={card} />
+        {column3.map((card, index) => (
+          <ShopCard card={card} key={index} />
         ))}
       </div>
     </div>
